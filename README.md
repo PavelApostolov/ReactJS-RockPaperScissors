@@ -2,7 +2,7 @@ This is a simple ReactJS application for playing Rock-paper-scissors against the
 
 Good luck!
 
-##Instructions for installation:
+# Instructions for installation:
 
 1. Run npm install to install all the necessary packages
 2. Be patient

@@ -20,12 +20,13 @@ const scoreHistory = (props) => {
     }).reverse();
 
     return (
-      <table className="table table-striped history">
-        <thead style={{textAlign: 'center'}}>
+      <table className="table table-sm table-striped">
+      <caption>Games history</caption>
+        <thead className="thead-dark" style={{textAlign: 'center'}}>
           <tr>
-            <th>Human</th>
-            <th>Machine</th>
-             <th>Result</th>
+            <th scope="col">Human</th>
+            <th scope="col">Machine</th>
+             <th scope="col">Result</th>
           </tr>
         </thead>
         <tbody style={{textAlign: 'center' }}>

@@ -18,12 +18,12 @@ const scoreBoard = (props) => {
       
         var game = props.scores[props.scores.length - 1];
         if (game.result === 1) {
-          message = 'You tied. Try again!';
+          message = 'Result: You tied. Try again!';
         } else if (game.result === 2) {
-          message = 'Victory! '+ game.player + ' beat ' + game.computer + '!';
+          message = 'Result: Victory! '+ game.player + ' beat ' + game.computer + '!';
           alertClass = 'won';
         } else {
-          message = 'Defeat! '+ game.computer + ' beat ' + game.player + '!';
+          message = 'Result: Defeat! '+ game.computer + ' beat ' + game.player + '!';
           alertClass = 'lost'
         }
       }
