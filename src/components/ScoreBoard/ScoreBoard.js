@@ -38,7 +38,7 @@ const scoreBoard = (props) => {
         </div>            
         <nav className="navbar navbar-default">
           <div className="container-fluid gameInfo" style={{ display: 'block'}}>
-            <div className="row text-center">      
+            <div className="row text-center scores">      
               <div className="col-sm-4 text-center-large">
                 <h4 id="green">Won: <span><strong>{outcome.won}</strong></span></h4>
               </div>

@@ -27,6 +27,10 @@
     margin: 3% 0;
     text-align: center;
 }
+.scores{
+    width: 40%;
+    margin: auto;
+}
 #green{
     color: green;
 }
