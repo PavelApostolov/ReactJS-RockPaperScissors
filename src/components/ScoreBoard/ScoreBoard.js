@@ -1,18 +1,18 @@
 import React from 'react';
 
 const scoreBoard = (props) => {
-    let stats = props.scores.reduce((stats, game) => {
+    let outcome = props.scores.reduce((outcome, game) => {
         if (game.result === 2) {
-          stats.won++;
+          outcome.won++;
         } else if (game.result === 1) {
-          stats.tie++;
+          outcome.tie++;
         } else if (game.result === 0) {
-          stats.lost++
+          outcome.lost++
         }
-        return stats
+        return outcome
       }, {won:0, lost: 0, tie: 0});
   
-      let message = 'Make your choice!';
+      let message = 'Choose rock, paper or scissors!';
       let alertClass = '';
       if (props.scores.length) {
       
@@ -29,24 +29,24 @@ const scoreBoard = (props) => {
       }
     
     return (
-      <div>
+      <div className="scoreboard">
+        <div className="col-sm-12 alerts">
+            <h4 className={alertClass}><strong>{message}</strong></h4>
+        </div>
         <div className="text-center">
           <h4 className="caps">Score</h4>
         </div>            
         <nav className="navbar navbar-default">
           <div className="container-fluid gameInfo" style={{ display: 'block'}}>
-            <div className="row text-center">
-              <div className="col-sm-6">
-                <h4 className={alertClass}><span><strong>{message}</strong></span></h4>
+            <div className="row text-center">      
+              <div className="col-sm-4 text-center-large">
+                <h4 id="green">Won: <span><strong>{outcome.won}</strong></span></h4>
               </div>
-              <div className="col-sm-2 text-center-large">
-                <h4 style={{ color: 'green'}}>Won: <span><strong>{stats.won}</strong></span></h4>
+              <div className="col-sm-4 text-center-large">
+                <h4 id="red">Lost: <span><strong>{outcome.lost}</strong></span></h4>
               </div>
-              <div className="col-sm-2 text-center-large">
-                <h4 style={{ color: 'red'}}>Lost: <span><strong>{stats.lost}</strong></span></h4>
-              </div>
-              <div className="col-sm-2 text-center-large">
-                <h4>Tie: <span><strong>{stats.tie}</strong></span></h4>
+              <div className="col-sm-4 text-center-large">
+                <h4>Ties: <span><strong>{outcome.tie}</strong></span></h4>
               </div>
             </div>
           </div>

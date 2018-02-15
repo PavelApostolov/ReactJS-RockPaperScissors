@@ -1,7 +1,7 @@
 .selections-container{
     display: block;
     width: 50%;
-    margin: 30px auto;
+    margin: 3% auto;
 }
 .selections-container h4{
     text-align: center;
@@ -20,8 +20,24 @@
 }
 .btn{
     display: block;
-    margin: 20px auto;
+    margin: 2% auto;
     width: 18%;
+}
+.alerts{
+    margin: 3% 0;
+    text-align: center;
+}
+#green{
+    color: green;
+}
+#red{
+    color: red;
+}
+.lost {
+  color: red;
+}
+.won {
+  color: green;
 }
 
 @media(max-width: 999px){

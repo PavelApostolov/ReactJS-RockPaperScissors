@@ -22,14 +22,14 @@ const scoreHistory = (props) => {
     return (
       <table className="table table-sm table-striped">
       <caption>Games history</caption>
-        <thead className="thead-dark" style={{textAlign: 'center'}}>
+        <thead className="thead-dark text-center">
           <tr>
-            <th scope="col">Human</th>
-            <th scope="col">Machine</th>
-             <th scope="col">Result</th>
+            <th>Human</th>
+            <th>Machine</th>
+            <th>Result</th>
           </tr>
         </thead>
-        <tbody style={{textAlign: 'center' }}>
+        <tbody className="text-center">
           {games}
         </tbody>
       </table>

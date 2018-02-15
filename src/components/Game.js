@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Game.css'
 
 import SelectWeapon from './SelectWeapon/SelectWeapon';
 import ScoreBoard from './ScoreBoard/ScoreBoard';
@@ -50,7 +51,7 @@ checkSelections = (option) => {
   this.setState({games});
 }
 
-restartGame = (e) => {
+restartGame = () => {
   this.setState({ games: [] });
 }
   
